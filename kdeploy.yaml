@@ -18,7 +18,7 @@ spec:
       - name: healthcare-container
         image: kavipriyabai/healthcare-app
         ports:
-        - containerPort: 8081
+        - containerPort: 8082
 ---
 apiVersion: v1
 kind: Service
@@ -32,6 +32,6 @@ spec:
 
   type: NodePort
   ports:
-    - port: 8081          # The port exposed inside the cluster
-      targetPort: 8081    # Port where your container listens
-      nodePort: 31035
+    - port: 8082          # The port exposed inside the cluster
+      targetPort: 8082    # Port where your container listens
+      nodePort: 31034
