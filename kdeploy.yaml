@@ -28,10 +28,10 @@ metadata:
     app: healthcare-app
 spec:
   selector:
-    app: healthcare-app
+    app: healthcare-app  # Ensures the Service selects pods with this label
 
   type: NodePort
   ports:
-  - nodePort: 31031    
-    port: 8081
-    targetPort: 8081
+    - port: 8081          # The port exposed inside the cluster
+      targetPort: 8081    # Port where your container listens
+      nodePort: 31031 
